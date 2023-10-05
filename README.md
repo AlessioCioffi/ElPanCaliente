@@ -5,7 +5,7 @@ Para clonar este repo sigue estos pasos:
 1. Abre tu terminal
 2. Navega al directorio donde deseas clonar el repo
 3. Ejecuta el siguente comando para clonar el repositorio:
-  git cloe https://github.com/AlessioCioffi/ElPanCaliente.git
+  git clone https://github.com/AlessioCioffi/ElPanCaliente.git
 4. Navega al repositorio clonado
 5. Crea entorno virtual instalando las dependecias que se utilizan en el royecto:
   pip install -m requirement.txt
