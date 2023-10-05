@@ -13,7 +13,7 @@ Para clonar este repo sigue estos pasos:
   python manage.py runserver
 
 Más info:
-El archivo "Insomnia_ElPanCaliente" lo puedes descargar y exportar en tu Insomonia 
+El archivo "Insomnia_El_pan_caliente" lo puedes descargar y exportar en tu Insomonia 
 para probar el codigo de una manera muy sensilla.
 1. Abre tu Insomnia
 2. Crea un "New prject"
