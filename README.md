@@ -8,7 +8,7 @@ Para clonar este repo sigue estos pasos:
   git clone https://github.com/AlessioCioffi/ElPanCaliente.git
 4. Navega al repositorio clonado
 5. Crea entorno virtual instalando las dependecias que se utilizan en el royecto:
-  pip install -m requirement.txt
+  pip install -r requirement.txt
 6. Levanta el servidor local:
   python manage.py runserver
 
