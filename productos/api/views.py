@@ -36,8 +36,14 @@ class ProductoApiView(APIView):
 
 class ProductoApiDetailView(APIView):
 
-    def get(self,pk):
-        producto = self.get_object(pk)
+    def get_object(self, pk):
+        try:
+            return Producto.objects.get(pk=pk)
+        except Producto.DoesNotExist:
+            raise status.HTTP_404_NOT_FOUND
+
+    def get(self, request, pk):
+        producto = self.get_object(pk=pk)
         if producto is not None:
             serializer = ProductoSerializer(producto)
             return Response(serializer.data)
@@ -53,10 +59,9 @@ class ProductoApiDetailView(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         return Response({"detail": "Producto no encontrado"}, status=status.HTTP_404_NOT_FOUND)
 
-    def delete(self,pk):
+    def delete(self,request, pk):
         producto = self.get_object(pk)
         if producto is not None:
             producto.delete()
             return Response(status=status.HTTP_204_NO_CONTENT)
         return Response({"detail": "Producto no encontrado"}, status=status.HTTP_404_NOT_FOUND)"""
-
